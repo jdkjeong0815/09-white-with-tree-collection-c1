@@ -42,14 +42,14 @@ let newHeight;
 let topColor1, topColor2;
 let bottomColor1, bottomColor2;
 
-function touchStarted() {
-  // 첫 번째 터치: 풀스크린 활성화
-  let fs = fullscreen();
-  fullscreen(!fs);
+// function touchStarted() {
+//   // 첫 번째 터치: 풀스크린 활성화
+//   let fs = fullscreen();
+//   fullscreen(!fs);
   
-  setTimeout(refreshSketch, 2000);  // 애니메이션 효과를 위해 120초로 변경
-  // return false; // 기본 터치 동작 방지
-}
+//   setTimeout(refreshSketch, 2000);  // 애니메이션 효과를 위해 120초로 변경
+//   // return false; // 기본 터치 동작 방지
+// }
 //================================================
 
 function preload() {
@@ -105,6 +105,10 @@ function initializeRandomElements() {
   mainLayer = createGraphics(minCanvas, minCanvas);
   snowLayer = createGraphics(minCanvas, minCanvas); // 별도의 레이어 생성
   snowflakes = [];
+  // dep = (minCanvasSize/60); // 정방형 LED 캔버스 : 프레임을 좁게 설정
+  // innerDep = dep * 5; // 안쪽 프레임 크기를 바깥쪽 프레임의 x배로 설정
+  dep = 0; // 정방형 LED 캔버스 : 바깥 프레임을 제거
+  innerDep = minCanvasSize/20; // 안쪽 프레임 크기를 적절히 설정
 }
 //================================================
 
