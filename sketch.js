@@ -70,8 +70,10 @@ function setup() {
   snowLayer = createGraphics(minCanvas, minCanvas); // 별도의 레이어 생성
   minCanvasSize = min(minCanvas, minCanvas);
 
-  dep = (minCanvasSize/60); // 정방형 LED 캔버스 : 프레임을 좁게 설정
-  innerDep = dep * 5; // 안쪽 프레임 크기를 바깥쪽 프레임의 x배로 설정
+  // dep = (minCanvasSize/60); // 정방형 LED 캔버스 : 프레임을 좁게 설정
+  // innerDep = dep * 5; // 안쪽 프레임 크기를 바깥쪽 프레임의 x배로 설정
+  dep = 0; // 정방형 LED 캔버스 : 바깥 프레임을 제거
+  innerDep = minCanvasSize/20; // 안쪽 프레임 크기를 적절히 설정
 
   // 랜덤 요소 초기화
   clear();
