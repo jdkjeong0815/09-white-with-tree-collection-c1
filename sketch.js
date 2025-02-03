@@ -32,7 +32,7 @@ let innerDep; // 안쪽 프레임 두께 설정  80px
 let aspectRatio; // 화면비 계산
 
 let mainLayer, snowLayer;
-let randomElements = {};
+// let randomElements = {};
 let minCanvasSize;
 let minCanvas;
 let canvas;
@@ -42,14 +42,14 @@ let newHeight;
 let topColor1, topColor2;
 let bottomColor1, bottomColor2;
 
-// function touchStarted() {
-//   // 첫 번째 터치: 풀스크린 활성화
-//   let fs = fullscreen();
-//   fullscreen(!fs);
+function touchStarted() {
+  // 첫 번째 터치: 풀스크린 활성화
+  let fs = fullscreen();
+  fullscreen(!fs);
   
-//   setTimeout(refreshSketch, 2000);  // 애니메이션 효과를 위해 120초로 변경
-//   // return false; // 기본 터치 동작 방지
-// }
+  setTimeout(refreshSketch, 2000);  // 애니메이션 효과를 위해 120초로 변경
+  // return false; // 기본 터치 동작 방지
+}
 //================================================
 
 function preload() {
